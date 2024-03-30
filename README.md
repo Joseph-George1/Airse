@@ -1,5 +1,4 @@
 #AirSecure
-```markdown
 
 
 AirSecure is a Python-based wireless network security toolkit that provides a comprehensive set of tools for scanning, monitoring, and securing WiFi networks.
@@ -12,13 +11,12 @@ AirSecure is a Python-based wireless network security toolkit that provides a co
 - **Monitor Mode:** Enable monitor mode on wireless interfaces to capture and analyze network traffic.
 - **Handshake Detection:** Automatically detect if a handshake has already been captured for a specific network.
 - **Easy to Use:** Simple command-line interface with intuitive commands and options.
-
 ## Requirements
 
 - Python 3.x
 - Aircrack-ng suite installed (`airmon-ng`, `airodump-ng`, `aireplay-ng`, etc.)
 - Superuser privileges (`sudo`)
-
+  
 ## Installation
 
 1. Clone the repository:
