@@ -22,7 +22,7 @@ AirSecure is a Python-based wireless network security toolkit that provides a co
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/AirSecure.git
+git clone https://github.com/josephgeorge26/AirSecure.git
 ```
 
 ## Usage
