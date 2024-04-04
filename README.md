@@ -12,7 +12,7 @@ AirSecure is a Python-based wireless network security toolkit that provides a co
 - **Handshake Detection:** Automatically detect if a handshake has already been captured for a specific network.
 - **Easy to Use:** Simple command-line interface with intuitive commands and options.
 ## Requirements
-
+(you can now simply run the requierments file :/)
 - Python 3.x (x stands for the latest version of python installed on your machine)
 - Aircrack-ng suite installed (`airmon-ng`, `airodump-ng`, `aireplay-ng`, etc.)
 - Superuser privileges (`sudo`)
