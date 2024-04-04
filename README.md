@@ -13,7 +13,7 @@ AirSecure is a Python-based wireless network security toolkit that provides a co
 - **Easy to Use:** Simple command-line interface with intuitive commands and options.
 ## Requirements
 
-- Python 3.x
+- Python 3.x (x stands for the latest version of python installed on your machine)
 - Aircrack-ng suite installed (`airmon-ng`, `airodump-ng`, `aireplay-ng`, etc.)
 - Superuser privileges (`sudo`)
   
