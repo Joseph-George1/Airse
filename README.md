@@ -28,7 +28,7 @@ git clone https://github.com/josephgeorge26/AirSecure.git
 ## Usage
 
 ```bash
-python airsecure.py
+sudo python3 airsecure.py
 ```
 
 Follow the on-screen instructions to use AirSecure.
