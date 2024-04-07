@@ -9,7 +9,7 @@ print("pls wait.....")
 # Print a welcome message
 print("""
   ****************************************
-  *            OUTIS AirSecure           *
+  *            OUTIS Airse               *
   *                                      *
   *  https://github.com/josephgeorge26   *
   ****************************************
