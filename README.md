@@ -1,7 +1,7 @@
-## AirSecure
+## Airse
 (DEMO)
 
-AirSecure is a Python-based wireless network security toolkit that provides a comprehensive set of tools for scanning, monitoring, and securing WiFi networks.
+Airse is a Python-based wireless network security toolkit that provides a comprehensive set of tools for scanning, monitoring, and securing WiFi networks.
 
 ## Features
 
@@ -30,8 +30,6 @@ git clone https://github.com/josephgeorge26/AirSecure.git
 ```bash
 sudo python3 airsecure.py
 ```
-
-Follow the on-screen instructions to use AirSecure.
 
 ## Contributing
 
