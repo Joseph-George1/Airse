@@ -22,13 +22,17 @@ Airse is a Python-based wireless network security toolkit that provides a compre
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/josephgeorge26/AirSecure.git
+git clone https://github.com/josephgeorge26/Airse0.git
 ```
 
 ## Usage
 
 ```bash
-sudo python3 airsecure.py
+sudo chmod +x install.sh
+
+sudo install.sh
+
+sudo Airse
 ```
 
 ## Contributing
