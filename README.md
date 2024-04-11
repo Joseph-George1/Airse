@@ -1,4 +1,4 @@
-## Airse
+# Airse
 (DEMO)
 
 Airse is a Python-based wireless network security toolkit that provides a comprehensive set of tools for scanning, monitoring, and securing WiFi networks.
@@ -34,7 +34,7 @@ sudo install.sh
 
 sudo Airse
 ```
-
+---
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to AirSecure, please fork the repository and submit a pull request.
