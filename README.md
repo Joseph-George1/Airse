@@ -1,5 +1,5 @@
 # Airse
-![Airse](https://github.com/josephgeorge26/Airse0/assets/62404986/6c7943c4-819f-420f-a129-ff541bad3537)
+![Aires](https://github.com/josephgeorge26/Airse/assets/62404986/00d08ac1-5a77-4997-ad7e-cda6bda5666a)
 
 (DEMO)
 
