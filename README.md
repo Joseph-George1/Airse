@@ -1,4 +1,4 @@
-# Airse
+# Airse.
 ![Aires](https://github.com/josephgeorge26/Airse/assets/62404986/6cb61527-9502-4ae9-aba4-65d792f98c86)
 
 
