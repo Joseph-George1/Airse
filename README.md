@@ -41,3 +41,9 @@ sudo Airse
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to AirSe, please fork the repository and submit a pull request.
+
+## Collaborators
+
+- **Joseph George** (GitHub: [Joseph-George1](https://github.com/Joseph-George1))
+- **Zeyad Saad** (GitHub: [temanhattan](https://github.com/temanhattan))
+
